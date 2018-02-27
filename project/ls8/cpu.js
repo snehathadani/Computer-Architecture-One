@@ -91,6 +91,7 @@ class CPU {
     tick() {
         // Load the instruction register (OR) from the current PC
         // !!! IMPLEMENT ME
+        this.reg.IR = this.ram.read(this.reg.PC);
 
         // Debugging output
         //console.log(`${this.reg.PC}: ${this.reg.IR.toString(2)}`);
