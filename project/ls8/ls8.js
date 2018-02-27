@@ -2,12 +2,23 @@ const fs = require('fs');
 const RAM = require('./ram');
 const CPU = require('./cpu');
 
+
+function toNumeric(string) {
+    result = 0;
+    for(i = string.length - 1; i >= 0; i--) {
+        if(string[i] === '1')
+            result = result + Math.pow(2, string.length - (i + 1))
+    }
+    return result;
+}
+
 /**
  * Process a loaded file
  */
 function processFile(content, cpu, onComplete) {
     // Pointer to the memory address in the CPU that we're
     // loading a value into:
+    
     let curAddr = 0;
     
     // Split the lines of the content up by newline
@@ -20,14 +31,22 @@ function processFile(content, cpu, onComplete) {
         // !!! IMPLEMENT ME
 
         // Strip comments
-
+        if(line.startsWith("#")) {
+            continue;
+        }
         // Remove whitespace from either end of the line
+        line.trim();
 
         // Ignore empty lines
+        if(line.length === 0)
+            continue;
 
         // Convert from binary string to numeric value
+        numeric = toNumeric(line.split(" ")[0]);
+
 
         // Store in the CPU with the .poke() function
+        cpu.poke(curAddr, numeric);
 
         // And on to the next one
         curAddr++;
