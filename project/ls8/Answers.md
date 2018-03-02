@@ -1,43 +1,29 @@
-* In industry terms, how many months does it take for the number of transistors
-  on a chip to double? Approximately every two years.
+Binary, Decimal, and Hex
+Complete the following problems:
 
-* Why are registers necessary? Why not use RAM?
-Registers are placed in CPU, which makes transmission more efficient, and signals are passed after storing them in catche.
+Convert 11001111 binary
 
-* Why is cache useful?
+to hex:
 
-* Why are interrupts useful?
+to decimal:
 
-* What are some examples of interrupts that might occur?
+Convert 4C hex
 
-* Describe what a CPU word is.
+to binary:
 
-* Describe what the system bus is and what size it is.
+to decimal:
 
-* Describe what a CPU instruction is.
+Convert 68 decimal
 
-* Describe what the CPU clock represents.
+to binary:
 
-* Describe what a CPU interrupt is.
+to hex:
 
-* Describe what kinds of pins enter and exit the CPU.
+Architecture
+One paragraph-ish:
 
-* Describe what DMA is.
+Explain how the CPU provides concurrency:
 
-* Say which peripherals are connected to the DMA bus.
+Describe assembly language and machine language:
 
-* Say which peripherals are connected to the I/O bus.
-
-* Describe what L1, L2, and L3 caches are.
-
-* Describe caching and storage from L1 through cloud storage.
-
-* Describe what RAM is and its reponsibility in the system.
-
-* Describe what the hard disk is and its responsibility in the system.
-
-* Describe what the network interface card is responsible for in the system.
-
-* Describe what the graphics card is responsible for in the system.
-
-* Suggest the role that graphics cards play in machine learning.
+Suggest the role that graphics cards play in machine learning:
